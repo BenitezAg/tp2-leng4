@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ubicación - TP Nº2</title>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>Ubicación interactiva</h2>
+
+    <label for="nombre">Nombre Ubicación</label>
+    <input type="text" id="nombre" placeholder="Ej: San Lorenzo, Salta">
+    <button onclick="buscarPorNombre()" class="btn-buscar"> Buscar por Nombre</button>
+
+    <button onclick="obtenerUbicacionActual()" class="btn-geo"> Obtener mi ubicación actual</button>
+    <br><br>
+
+    <label for="lat">Latitud</label>
+    <input type="text" id="lat" placeholder="Ej: -24.7821">
+
+    <label for="lng">Longitud</label>
+    <input type="text" id="lng" placeholder="Ej: -65.4233">
+
+    <button onclick="abrirCoordenadas()" class="btn-abrir">Abrir Ubicación (Coordenadas)</button>
+
+    <div id="map"></div>
+
+    <div class="historial-container">
+      <h3>Historial de Posiciones</h3>
+      <ul id="lista-historial"></ul>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
